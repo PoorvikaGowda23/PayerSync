@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1 class="title">Payer Details: {{ payer.display_name }} </h1>
+        <p class="group-info">Group: {{ payer.group.display_name }}</p>
+
+        <h2 class="section-title">Raw Payer Details</h2>
+        <div class="details-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Raw Name</th>
+                        <th>Payer ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for detail in payer.payer_details %}
+                    <tr>
+                        <td>{{ detail.source }}</td>
+                        <td>{{ detail.raw_name }}</td>
+                        <td>{{ detail.payer_number if detail.payer_number else 'N/A' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a href="{{ url_for('payer_groups') }}" class="back-button">Back to Payer Groups</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1 class="title">Dental Insurance Payer Processing</h1>
+        
+        <!-- Upload Form -->
+        <div class="upload-section">
+            <form method="post" enctype="multipart/form-data" action="{{ url_for('upload_file') }}" class="upload-form">
+                <label for="file" class="file-label">Choose File</label>
+                <input type="file" id="file" name="file" accept=".xlsx" class="file-input">
+                <button type="submit" class="upload-button">Upload and Process</button>
+                <span class="file-name">No file chosen</span>
+            </form>
+        </div>
+
+        <!-- Flash Messages -->
+        {% for message in get_flashed_messages(with_categories=true) %}
+            <div class="flash {{ message[0] }}">{{ message[1] }}</div>
+        {% endfor %}
+    </div>
+{% endblock %}
