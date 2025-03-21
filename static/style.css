@@ -1,0 +1,411 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ecf0f1;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.upload-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.file-label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #2980b9;
+}
+
+.file-name {
+    color: #7f8c8d;
+    margin-left: 10px;
+}
+
+.section-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.groups-container {
+    display: grid;
+    gap: 20px;
+}
+
+.group-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.group-card:hover {
+    transform: translateY(-5px);
+}
+
+.group-name {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payer-count {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.payer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payer-item {
+    margin-bottom: 5px;
+}
+
+.payer-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.payer-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.form-control {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.flash.success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.flash.error {
+    background-color: #e74c3c;
+    color: white;
+}
+
+
+/* Table Styling for Groups */
+.groups-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Keep existing styles for the payer list within the table */
+.payer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payer-item {
+    margin-bottom: 5px;
+}
+
+.payer-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.payer-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+/* Table Styling for Groups */
+.groups-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Payer list within table */
+.payer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payer-item {
+    margin-bottom: 5px;
+}
+
+.payer-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.payer-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Table Styling for Groups */
+.groups-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.payer-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.payer-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
